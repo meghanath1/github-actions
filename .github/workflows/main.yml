@@ -1,0 +1,13 @@
+# .github/workflows/hello-world.yml
+name: Hello world
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  explore-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo "Hello, world! The runner is ready."
