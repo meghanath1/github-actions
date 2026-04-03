@@ -27,3 +27,9 @@ jobs:
        with:
          name: build dist
          path: dist
+  deploy-angular:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy
+        run: echo "Test step"
