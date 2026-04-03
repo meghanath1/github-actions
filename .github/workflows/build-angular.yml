@@ -21,3 +21,9 @@ jobs:
       
      - name: Build
        run: npm run build
+
+     - name: Build artifact
+       uses: actions/build-artifact@v6
+       with:
+         name: build dist
+         path: dist
