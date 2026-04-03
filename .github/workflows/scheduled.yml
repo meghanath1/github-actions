@@ -1,0 +1,13 @@
+name: Scheduled workflow
+
+on:
+  workflow_dispatch:
+
+
+    
+jobs:
+  manual:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo "${{inputs.name}}"
