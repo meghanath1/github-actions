@@ -2,9 +2,14 @@ name: Maual workflow
 
 on:
   workflow_dispatch:
+    inputs:
+      name:
+        description: "Name"
+        type: string
+        default: 'test'
     
 jobs:
-  explore-actions:
+  manual:
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
