@@ -4,7 +4,6 @@ on:
   push:
     branches: [ "main" ]
 
-
 jobs:
   build-angular:
     runs-on: ubuntu-latest
@@ -27,9 +26,15 @@ jobs:
        with:
          name: build dist
          path: dist
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo "Test job2"
+        
   deploy-angular:
     runs-on: ubuntu-latest
-    needs: build-angular
+    needs: [build-angular,job2]
     steps:
       - name: Deploy
         run: echo "Test step"
