@@ -34,7 +34,10 @@ jobs:
         
   deploy-angular:
     runs-on: ubuntu-latest
-    needs: [build-angular,job2]
+    if: ${{always()}}
+    needs:
+       - build-angular
+       - job2
     steps:
       - name: Deploy
         run: echo "Test step"
