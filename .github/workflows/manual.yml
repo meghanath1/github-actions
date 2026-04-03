@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
-        run: echo "Maual Hello, world! The runner is ready."
+        run: echo "${{inputs.name}}"
